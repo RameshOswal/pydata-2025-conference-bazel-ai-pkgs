@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+type: conference-paper
+title: "Building Bazel Packages for AI/ML: SciPy, PyTorch, and Beyond"
+authors:
+  - family-names: Oswal
+    given-names: Ramesh
+  - family-names: Oswal
+    given-names: Jiten
+conference:
+  name: "PyData Seattle 2025"
+  location: "Seattle, WA, USA"
+  date-start: 2025-11-01
+  date-end: 2025-11-30
+year: 2025
+month: 11
+abstract: "AI/ML workloads depend heavily on complex software stacks, including numerical computing libraries (SciPy, NumPy), deep learning frameworks (PyTorch, TensorFlow), and specialized toolchains (CUDA, cuDNN). However, integrating these dependencies into Bazel-based workflows remains challenging due to compatibility issues, dependency resolution, and performance optimization. This session explores the process of creating and maintaining Bazel packages for key AI/ML libraries, ensuring reproducibility, performance, and ease of use for researchers and engineers."
+keywords:
+  - Bazel
+  - AI/ML
+  - SciPy
+  - PyTorch
+  - TensorFlow
+  - Build Systems
+  - Package Management
+  - Dependency Management
+  - GPU Acceleration
+  - Reproducible Builds
+repository-code: "https://github.com/RameshOswal/pydata-2025-conference-bazel-ai-pkgs"
+license: MIT
