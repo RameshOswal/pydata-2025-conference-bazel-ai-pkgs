@@ -43,7 +43,7 @@ This repository is available at: [https://github.com/RameshOswal/pydata-2025-con
 
 ## License
 
-[Add your license information here]
+This work is licensed under the [MIT License](LICENSE), which permits free use, modification, and distribution. If you use or reference this work, please cite it using the citation formats provided above.
 
 ## Contact
 
