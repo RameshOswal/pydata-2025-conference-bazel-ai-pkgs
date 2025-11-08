@@ -14,6 +14,7 @@ conference:
   date-end: 2025-11-30
 year: 2025
 month: 11
+# Using a block `>` makes the long abstract easier to read and maintain
 abstract: >-
   AI/ML workloads depend heavily on complex software stacks, including numerical 
   computing libraries (SciPy, NumPy), deep learning frameworks (PyTorch, TensorFlow), 
