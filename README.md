@@ -14,14 +14,12 @@ If you use this work or reference this presentation, please cite it as:
 ### BibTeX
 
 ```bibtex
-@inproceedings{oswal2025bazel,
-  author    = {Oswal, Ramesh and Oswal, Jiten},
-  title     = {Building Bazel Packages for AI/ML: SciPy, PyTorch, and Beyond},
-  booktitle = {Proceedings of PyData Seattle 2025},
-  year      = {2025},
-  month     = {November},
-  address   = {Seattle, WA, USA},
-  organization = {PyData}
+@inproceedings{Oswal_Building_Bazel_Packages_2025,
+author = {Oswal, Ramesh and Oswal, Jiten},
+month = nov,
+series = {PyData Seattle 2025},
+title = {{Building Bazel Packages for AI/ML: SciPy, PyTorch, and Beyond}},
+year = {2025}
 }
 ```
 
