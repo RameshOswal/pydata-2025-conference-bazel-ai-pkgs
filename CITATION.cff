@@ -14,7 +14,15 @@ conference:
   date-end: 2025-11-30
 year: 2025
 month: 11
-abstract: "AI/ML workloads depend heavily on complex software stacks, including numerical computing libraries (SciPy, NumPy), deep learning frameworks (PyTorch, TensorFlow), and specialized toolchains (CUDA, cuDNN). However, integrating these dependencies into Bazel-based workflows remains challenging due to compatibility issues, dependency resolution, and performance optimization. This session explores the process of creating and maintaining Bazel packages for key AI/ML libraries, ensuring reproducibility, performance, and ease of use for researchers and engineers."
+# Using a block `>` makes the long abstract easier to read and maintain
+abstract: >-
+  AI/ML workloads depend heavily on complex software stacks, including numerical 
+  computing libraries (SciPy, NumPy), deep learning frameworks (PyTorch, TensorFlow), 
+  and specialized toolchains (CUDA, cuDNN). However, integrating these dependencies 
+  into Bazel-based workflows remains challenging due to compatibility issues, 
+  dependency resolution, and performance optimization. This session explores 
+  the process of creating and maintaining Bazel packages for key AI/ML libraries, 
+  ensuring reproducibility, performance, and ease of use for researchers and engineers.
 keywords:
   - Bazel
   - AI/ML
