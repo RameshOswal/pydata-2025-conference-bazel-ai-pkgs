@@ -37,6 +37,10 @@ R. Oswal and J. Oswal, "Building Bazel Packages for AI/ML: SciPy, PyTorch, and B
 
 This presentation explores the process of building and managing Bazel packages for popular AI/ML libraries including SciPy, PyTorch, and other essential tools in the data science ecosystem.
 
+## Presentation Slides
+
+View the presentation slides: [Google Slides](https://docs.google.com/presentation/d/1P3X_WT-q-BclKU27D-BFGc1X1tkY5dGq1eoulXVutrA/edit?slide=id.g792ec319fe_4_64#slide=id.g792ec319fe_4_64)
+
 ## Repository
 
 This repository is available at: [https://github.com/RameshOswal/pydata-2025-conference-bazel-ai-pkgs](https://github.com/RameshOswal/pydata-2025-conference-bazel-ai-pkgs)
