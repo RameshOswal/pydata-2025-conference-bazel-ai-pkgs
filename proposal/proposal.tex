@@ -1,0 +1,294 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+
+% Formatting
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue
+}
+
+\titleformat{\section}
+  {\normalfont\Large\bfseries\color{blue!60!black}}{\thesection}{1em}{}
+
+\titleformat{\subsection}
+  {\normalfont\large\bfseries}{\thesubsection}{1em}{}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+% https://www.overleaf.com/project/690f034af7653300907b3a2e
+\begin{document}
+
+% Title Page
+\begin{center}
+    {\Huge\bfseries Building Bazel Packages for AI/ML:\\SciPy, PyTorch, and Beyond}
+    
+    \vspace{1.5cm}
+    
+    {\Large Conference Proposal}
+    
+    \vspace{0.5cm}
+    
+    {\large PyData Seattle 2025}
+    
+    \vspace{2cm}
+    
+    {\Large\textbf{Speakers:}}
+    
+    \vspace{0.5cm}
+    
+    {\large Ramesh Oswal}
+    
+    {\large Jiten Oswal}
+    
+    \vspace{2cm}
+    
+    {\large \today}
+\end{center}
+
+\newpage
+
+% Table of Contents
+\tableofcontents
+\newpage
+
+\section{Proposal Overview}
+
+\subsection{Title}
+Building Bazel Packages for AI/ML: SciPy, PyTorch, and Beyond
+
+\subsection{Speakers}
+\begin{itemize}[leftmargin=2em]
+    \item \textbf{Ramesh Oswal}
+    \item \textbf{Jiten Oswal}
+\end{itemize}
+
+\subsection{Session Duration}
+280 minutes (4 hours 40 minutes)
+
+\subsection{Target Audience}
+\begin{itemize}[leftmargin=2em]
+    \item Software engineers working with AI/ML infrastructure
+    \item DevOps and MLOps practitioners
+    \item Data scientists interested in reproducible builds
+    \item Build system engineers
+    \item Researchers managing complex dependency chains
+\end{itemize}
+
+\section{Abstract}
+
+AI/ML workloads depend heavily on complex software stacks, including numerical computing libraries (SciPy, NumPy), deep learning frameworks (PyTorch, TensorFlow), and specialized toolchains (CUDA, cuDNN). However, integrating these dependencies into Bazel-based workflows remains challenging due to compatibility issues, dependency resolution, and performance optimization. 
+
+This session explores the process of creating and maintaining Bazel packages for key AI/ML libraries, ensuring reproducibility, performance, and ease of use for researchers and engineers.
+
+\section{Session Outline}
+
+\subsection{Introduction to Bazel for AI/ML (20 minutes)}
+
+This section introduces participants to Bazel and its relevance for AI/ML workflows:
+
+\begin{itemize}[leftmargin=2em]
+    \item Overview of Bazel build system fundamentals
+    \item Why Bazel matters for AI/ML workloads
+    \item Benefits of Bazel for dependency management
+    \item Reproducibility and hermetic builds
+    \item Cross-platform compatibility considerations
+    \item Comparison with traditional Python packaging (pip, conda)
+\end{itemize}
+
+\textbf{Learning Outcomes:}
+\begin{itemize}[leftmargin=2em]
+    \item Understand Bazel's core concepts and terminology
+    \item Recognize the advantages of Bazel for AI/ML projects
+    \item Identify use cases where Bazel adds value
+\end{itemize}
+
+\subsection{Challenges in AI/ML Bazel Packaging (30 minutes)}
+
+An in-depth exploration of the unique challenges encountered when packaging AI/ML libraries with Bazel:
+
+\begin{itemize}[leftmargin=2em]
+    \item \textbf{Transitive Dependencies:} Managing complex dependency graphs
+    \item \textbf{Build System Differences:} Bridging CMake, setuptools, and Bazel
+    \item \textbf{GPU Acceleration:} Integrating CUDA, cuDNN, and hardware-specific toolchains
+    \item \textbf{Binary Compatibility:} ABI compatibility across different platforms
+    \item \textbf{Large Binary Sizes:} Handling large ML model files and libraries
+    \item \textbf{Version Conflicts:} Resolving conflicts between library versions
+    \item \textbf{Native Extensions:} Compiling C/C++ extensions for Python libraries
+\end{itemize}
+
+\textbf{Learning Outcomes:}
+\begin{itemize}[leftmargin=2em]
+    \item Identify common pitfalls in AI/ML library packaging
+    \item Understand dependency resolution complexities
+    \item Recognize GPU toolchain integration challenges
+\end{itemize}
+
+\subsection{Strategies for Packaging (30 minutes)}
+
+Practical strategies and techniques for successfully packaging AI/ML libraries:
+
+\begin{itemize}[leftmargin=2em]
+    \item \textbf{SciPy Stack:} Building NumPy, SciPy, and related numerical libraries
+    \item \textbf{PyTorch:} Creating Bazel rules for PyTorch with CUDA support
+    \item \textbf{TensorFlow:} Leveraging existing Bazel infrastructure
+    \item \textbf{Dependency Management:} Strategies for managing transitive dependencies
+    \item \textbf{Performance Optimization:} Ensuring optimal build and runtime performance
+    \item \textbf{Cross-Platform Support:} Building for Linux, macOS, and Windows
+    \item \textbf{Testing and Validation:} Ensuring package correctness and functionality
+\end{itemize}
+
+\textbf{Learning Outcomes:}
+\begin{itemize}[leftmargin=2em]
+    \item Apply proven packaging strategies to common libraries
+    \item Optimize builds for performance and compatibility
+    \item Implement effective testing strategies
+\end{itemize}
+
+\subsection{Best Practices for Distribution and Maintenance (20 minutes)}
+
+Guidelines for maintaining and distributing Bazel packages in production environments:
+
+\begin{itemize}[leftmargin=2em]
+    \item \textbf{Version Management:} Semantic versioning and release strategies
+    \item \textbf{Repository Structure:} Organizing Bazel workspaces effectively
+    \item \textbf{Distribution Channels:} Using Bazel Central Registry and private registries
+    \item \textbf{Documentation:} Creating user-friendly package documentation
+    \item \textbf{CI/CD Integration:} Automating build and test pipelines
+    \item \textbf{Community Engagement:} Contributing to open-source Bazel rules
+    \item \textbf{Monitoring and Updates:} Keeping packages up-to-date with upstream changes
+\end{itemize}
+
+\textbf{Learning Outcomes:}
+\begin{itemize}[leftmargin=2em]
+    \item Establish sustainable maintenance workflows
+    \item Implement effective distribution strategies
+    \item Integrate packages into CI/CD pipelines
+\end{itemize}
+
+\subsection{Hands-on Demo (144 minutes)}
+
+An extensive practical demonstration where participants follow along:
+
+\begin{itemize}[leftmargin=2em]
+    \item \textbf{Environment Setup:} Configuring Bazel for AI/ML development
+    \item \textbf{Building SciPy:} Step-by-step package creation for SciPy
+    \item \textbf{Integrating PyTorch:} Adding PyTorch with GPU support
+    \item \textbf{Creating Custom Rules:} Writing Bazel rules for custom libraries
+    \item \textbf{Dependency Resolution:} Handling complex dependency chains
+    \item \textbf{Testing and Validation:} Running tests to verify package functionality
+    \item \textbf{Performance Benchmarking:} Comparing build times and runtime performance
+    \item \textbf{Troubleshooting:} Common issues and debugging techniques
+\end{itemize}
+
+\textbf{Learning Outcomes:}
+\begin{itemize}[leftmargin=2em]
+    \item Build complete Bazel packages for real AI/ML libraries
+    \item Debug and troubleshoot packaging issues
+    \item Apply learned techniques to custom projects
+\end{itemize}
+
+\subsection{Q\&A and Open Discussion (36 minutes)}
+
+An interactive session for:
+
+\begin{itemize}[leftmargin=2em]
+    \item Addressing participant questions
+    \item Discussing specific use cases and challenges
+    \item Sharing experiences and best practices
+    \item Exploring future directions for Bazel in AI/ML
+    \item Networking and community building
+\end{itemize}
+
+\section{Key Takeaways}
+
+Participants will leave this session with:
+
+\begin{enumerate}[leftmargin=2em]
+    \item \textbf{Practical Knowledge:} Hands-on experience building Bazel packages for AI/ML libraries
+    \item \textbf{Problem-Solving Skills:} Techniques to overcome common packaging challenges
+    \item \textbf{Best Practices:} Industry-standard approaches to package maintenance and distribution
+    \item \textbf{Reproducible Workflows:} Ability to create hermetic, reproducible build environments
+    \item \textbf{Community Resources:} Knowledge of community tools, resources, and support channels
+\end{enumerate}
+
+\section{Prerequisites}
+
+To get the most out of this session, participants should have:
+
+\begin{itemize}[leftmargin=2em]
+    \item Basic understanding of build systems and dependency management
+    \item Familiarity with Python and AI/ML libraries
+    \item Basic command-line proficiency
+    \item (Optional) Prior exposure to Bazel or similar build systems
+    \item Laptop with Docker or Bazel installed (for hands-on portion)
+\end{itemize}
+
+\section{Materials Provided}
+
+\begin{itemize}[leftmargin=2em]
+    \item Complete Bazel workspace examples
+    \item Sample BUILD files for SciPy, PyTorch, and other libraries
+    \item Documentation and reference guides
+    \item Troubleshooting checklists
+    \item Links to additional resources and community support
+\end{itemize}
+
+\section{Speaker Information}
+
+\subsection{Ramesh Oswal}
+
+Ramesh Oswal is an experienced software engineer specializing in build systems and AI/ML infrastructure. With extensive experience in Bazel and large-scale dependency management, Ramesh has contributed to numerous open-source projects focused on reproducible ML workflows.
+
+\subsection{Jiten Oswal}
+
+Jiten Oswal brings expertise in DevOps, MLOps, and infrastructure automation. His work focuses on creating efficient, scalable build pipelines for AI/ML applications, with a particular emphasis on cross-platform compatibility and performance optimization.
+
+\section{Why This Session Matters}
+
+As AI/ML workloads become increasingly complex and production-critical, the need for reliable, reproducible build systems has never been greater. Traditional Python packaging approaches often fall short when dealing with:
+
+\begin{itemize}[leftmargin=2em]
+    \item Complex native dependencies (CUDA, cuDNN, MKL)
+    \item Large-scale monorepo structures
+    \item Strict reproducibility requirements
+    \item Cross-platform deployment needs
+    \item High-performance computing environments
+\end{itemize}
+
+This session addresses these challenges head-on, providing practical solutions that teams can implement immediately. By the end of the session, participants will have the skills and confidence to manage their own AI/ML dependencies using Bazel, leading to more reliable and maintainable systems.
+
+\section{Expected Outcomes}
+
+After attending this session, participants will be able to:
+
+\begin{enumerate}[leftmargin=2em]
+    \item Create Bazel packages for popular AI/ML libraries
+    \item Integrate GPU acceleration toolchains into Bazel builds
+    \item Manage complex dependency graphs effectively
+    \item Set up reproducible build environments for AI/ML projects
+    \item Troubleshoot common packaging issues
+    \item Contribute to the Bazel AI/ML ecosystem
+\end{enumerate}
+
+\section{Contact Information}
+
+For questions or additional information about this proposal, please contact the speakers through the GitHub repository:
+
+\url{https://github.com/RameshOswal/pydata-2025-conference-bazel-ai-pkgs}
+
+\vspace{2cm}
+
+\begin{center}
+\line(1,0){250}
+
+\textit{Thank you for considering this proposal for PyData Seattle 2025!}
+\end{center}
+
+\end{document}
