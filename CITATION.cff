@@ -3,17 +3,12 @@ message: "If you use this work, please cite it as below."
 type: conference-paper
 title: "Building Bazel Packages for AI/ML: SciPy, PyTorch, and Beyond"
 authors:
-  - family-names: "Oswal"
-    given-names: "Ramesh"
-  - family-names: "Oswal"
-    given-names: "Jiten"
-conference:
-  name: "PyData Seattle 2025"
-  location: "Seattle, WA, USA"
-  date-start: 2025-11-01
-  date-end: 2025-11-30
+  - family-names: Oswal
+    given-names: Ramesh
+  - family-names: Oswal
+    given-names: Jiten
+date-released: 2025-11-01
 year: 2025
-month: 11
 # Using a block `>` makes the long abstract easier to read and maintain
 abstract: >-
   AI/ML workloads depend heavily on complex software stacks, including numerical 
