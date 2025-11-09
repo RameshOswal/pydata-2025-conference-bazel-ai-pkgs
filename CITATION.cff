@@ -6,6 +6,9 @@ authors:
 - family-names: "Oswal"
   given-names: "Jiten"
 title: "Building Bazel Packages for AI/ML: SciPy, PyTorch, and Beyond"
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.17561857
 date-released: 2025-11-08
 url: "https://github.com/RameshOswal/pydata-2025-conference-bazel-ai-pkgs"
 preferred-citation:
